@@ -36,8 +36,7 @@ services:
   # The flask application server
   backend:
     image: data61/anonlink-app:${TAG:-latest}
-    env_file:
-      - .env
+    env_file: .env
     environment:
       - FLASK_DB_MIN_CONNECTIONS=1
       - FLASK_DB_MAX_CONNECTIONS=10
